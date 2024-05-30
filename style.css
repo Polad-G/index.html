@@ -1,0 +1,129 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Zeyada", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(ed3e6d0f-0535-42a4-ac00-27b12ad64ad7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+a{
+  color: white;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    
+}
+/* header start*/
+header{
+    height: 100px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+}
+
+header nav .logo a{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    column-gap: 35px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: #0ba2c0;
+    transition: color.30s ease;
+
+}
+nav .menu{
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+}
+/*header end */ 
+.menu-botton{
+color: #0ba2c0;
+text-decoration: none;
+background-color: rgba(255, 255, 255, 0.08);
+padding: 8px 32px;
+border-radius: 60px;
+transition: all .25s ease;
+}
+.menu-botton:hover{
+    background-color: #0ba2c0;
+    color: antiquewhite;
+}
+/* ren start */
+/*  res end */
+ @media(max-width: 576px){
+    .container{
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .menu .menu-botton{
+        display: none;
+    }
+    .menu ul{
+        column-gap: 20px;
+
+    }
+ }
+.content{
+    color: white;
+    height: calc(100vh-100vh);
+    padding: 150px;
+    margin-top: 35px;
+    padding-top: 60px;
+}
+.content h1{
+    font-size: 40px;
+    text-align: center;
+}
+.content p{
+font-size: 16px;
+text-align: center;
+}
+.content .links{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    column-gap: 20px;
+    
+    
+}
+.content .links a{
+    background-color: rgb(114, 103, 103);
+    padding: 14px;
+    width: 280px;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    
+    
+}
+.content .links a:hover{
+    background-color: #0ba2c0;
+    color: white;
+    transition: all 0.25s ease;
+    
+}
