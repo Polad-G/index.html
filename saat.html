@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock">
+        <div class="a" id="saat">00</div>
+        <div class="b">:</div>
+        <div class="a" id="deqiqe">00</div>
+        <div class="b">:</div>
+        <div class="a" id="saniye">00</div>
+    </div>
+    <script src="script.js"></script>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .clock{
+            display: flex;
+            font-size: 4rem;
+            border:  5px solid white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .a{
+            margin: 0 10px;
+        }
+        .b{
+            margin: 0 5px;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const hoursElement = document.getElementById('saat');
+            const minuteElement = document.getElementById("deqiqe");
+            const secondElement = document.getElementById("saniye");
+            hoursElement.textContent = String(hours).padStart(2, "0");
+            minuteElement.textContent = String(minutes).padStart(2, "0");
+            secondElement.textContent = String(seconds).padStart(2, "0");
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
